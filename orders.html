@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 1
+      Individual Case Project page 72
+
+      Author: Chris Liddell
+      Date:  February  7, 2020
+
+      Filename: orders.html
+   -->
+<title>Order Page</title>
+<meta charset="utf-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="modernizr.custom.65897.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <header role="banner">
+    <h1 class="headerReplacement">Liddell Design Woodburning</h1>
+  </header>
+  <nav role="navigation">
+    <a href="index.html">Home</a>&nbsp;&nbsp;
+    <a href="origins.html">Origins</a>&nbsp;&nbsp;
+    <a href="types.html">Types</a>&nbsp;&nbsp;
+    <a href="mywork.html">My Work</a>&nbsp;&nbsp;
+	<a href="tools.html">Tools</a>&nbsp;&nbsp;
+	<a href="orders.html">Orders</a>&nbsp;&nbsp;
+  </nav>
+  <aside role="complementary">
+		<h3>About the Artist</h3>
+		<p class="news">Hi my name is Chris Liddell and I am an artist and designer. Art is a passion of mine that relieves my stress and brings me comfort as it allows me to exercise my passion in a constructive way. It affords me the opportunity of placing down on paper the images and the beauty in which I see in this world. I’ve always enjoyed working with wood just like my grandfather and have just taken my love for art and for the natural beauty of wood and simply placed a bit of beauty on top of something already so pure and so raw and so real. I hope you enjoy my nature inspired expressions of beauty. Contact me for your custom design orders via Telephone <a href="tel:9095873020">(909) 587-3020</a> or via Email <a href="mailto:chrislliddell@yahoo.com">chrislliddell@yahoo.com</a></p>
+		<h3>Favorite Styles</h3>
+		<p class="news"><b>Realism...</b>in the arts is generally the attempt to represent subject matter truthfully, without artificiality and avoiding artistic conventions, or implausible, exotic, and supernatural elements. Realism has been prevalent in the arts at many periods, and can be in large part a matter of technique and training, and the avoidance of stylization.</p>
+		<h3>Recent Project</h3>
+		<p class="news">No recent projects at the moment but check back soon</p>
+	</aside>
+  <main role="main">
+ <h2><a href="orders.html">Order Your Design Today</a></h2>
+    <p>Now it is time to order your own personalized wood burned design! Each one is created with extreme attention to detail and with a unique passion for design. Art is a passion of mine that relieves my stress and brings me comfort as it allows me to exercise my passion in a constructive way. It affords me the opportunity of placing down on paper the images and the beauty in which I see in this world. I’ve always enjoyed working with wood just like my grandfather and have just taken my love for art and for the natural beauty of wood and simply placed a bit of beauty on top of something already so pure and so raw and so real. I hope you enjoy my nature inspired expressions of beauty. </p>
+<h2>Design Orders</h2>
+      <form>
+         <input type="checkbox" id="item1" value="20" />
+         <label for="item1">Plaques ($20.00)</label>
+         <input type="checkbox" id="item2" value="40" />
+         <label for="item2">Keepsake Boxes ($40.00)</label>
+         <input type="checkbox" id="item3" value="60" />
+         <label for="item3">8 x 10 Designs ($60.00)</label>
+         <input type="checkbox" id="item4" value="80" />
+         <label for="item4">11 x 14 Designs ($80.00)</label>
+         <input type="checkbox" id="item5" value="100" />
+         <label for="item5">Portraits ($100.00)</label>
+         <input type="submit" id="submit" value="Submit" />
+      </form>
+   </article>
+   <script>
+		function calcTotal() {
+			var itemTotal = 0;
+			var item1 = document.getElementById("item1");
+			var item2 = document.getElementById("item2");
+			var item3 = document.getElementById("item3");
+			var item4 = document.getElementById("item4");
+			var item5 = document.getElementById("item5");
+			(item1.checked) ? (itemTotal += 20): (itemTotal += 0);
+			(item2.checked) ? (itemTotal += 40): (itemTotal += 0);
+			(item3.checked) ? (itemTotal += 60): (itemTotal += 0);
+			(item4.checked) ? (itemTotal += 80): (itemTotal += 0);
+			(item5.checked) ? (itemTotal += 100): (itemTotal += 0);
+			var salesTaxRate = 0.0775;
+			itemTotal *= 100;
+			var orderTotal = (itemTotal + (itemTotal * salesTaxRate)) /100;
+			alert("Your order total is $" + orderTotal);
+		}
+		document.getElementById("submit") .addEventListener("click", calcTotal, false);
+			if (window.addEventListener) {
+			window.addEventListener("load", setUpPage, false);
+		}   else if (window.attachEvent) {
+			window.attachEvent("onload", setUpPage);
+	</script>
+<h2><a href="orders.html">Designs Ideas</a></h2>
+	 <p>Here are some design ideas you can select to purchase or you can submit your own photo or picture for a personalized wood burned design.</p>
+  <img src="beauty.jpg" width="200" height="200" alt="Beauty"/>
+  <img src="butterfly.jpg" width="200" height="200" alt="Butterfly" />    
+  <img src="dove.jpg" width="200" height="200" alt="Dove"/>
+  <img src="hands.jpg" width="200" height="200" alt="Hands" />     
+  <img src="rose.jpg" width="200" height="200" alt="Rose" />     
+  <img src="shayla.jpg" width="200" height="200" alt="Shayla Indira" />  
+  </main>     
+    <footer role="contentinfo">Copyright 2020 Chris Liddell. All Rights Reserved<br>
+	<p><a href="https://www.instagram.com/liddell_design/"><img src="ig_58.png" width="50" height="50" alt="Instagram"></a>
+	<a href="https://twitter.com/liddell_design"><img src="tw_58.png" width="50" height="50" alt="Twitter"></a>
+	<a href="https://www.facebook.com/liddellbydesign"><img src="fb_58.png" width="50" height="50" alt="Facebook"></a>
+	<a href="https://liddelldesign.tumblr.com/"><img src="tbl_58.svg" width="50" height="50" alt="Tumblr"></a>
+	<a href="https://www.paypal.me/liddelldesign/"><img src="pp_58.png" width="50" height="50" alt="PayPal"></a></p>
+  </footer>
+</div>
+</body>
+</html>
+
+
